@@ -1,11 +1,21 @@
 # mk_emul — STM32F407 emulator
 
-> Branch `my-version`, based on the original repository at commit `bf0b419`.
+> Builds on the original version at commit `bf0b419`, extended in pull requests #1 and #2.
 > **What changed and why:** [CHANGELOG.md](CHANGELOG.md) (summary table at the top, then every fix
-> with the files it touched). Diff of the code: `git diff bf0b419 my-version`, step by step:
-> `git log --reverse bf0b419..my-version`. Remaining work: [docs/TODO.md](docs/TODO.md).
+> with the files it touched). Diff of the code: `git diff bf0b419 main`, step by step:
+> `git log --reverse bf0b419..main`. Remaining work: [docs/TODO.md](docs/TODO.md).
 
 Desktop emulator of **STM32F407VG** (Cortex-M4): Unicorn Engine for the CPU, a custom MMIO model for peripherals, Qt 6 Quick/QML UI.
+
+## Authors
+
+- **LifeStyle28** — original version (commit `bf0b419`): emulator base with Qt UI, core and
+  firmware examples; project supervision and review.
+- **Svyatoslav Nikulin** ([Taraved](https://github.com/Taraved)) — development in
+  [#1](https://github.com/LifeStyle28/mk_emul/pull/1) and [#2](https://github.com/LifeStyle28/mk_emul/pull/2): Cortex-M4 core with exact interrupt timing,
+  fault handling and FPU context; TIM2–TIM7 with PWM; STM32CubeF4 HAL, FreeRTOS and CubeMX
+  projects in Build & Load; source-level debugger (GDB server + gdb/MI client); optimization
+  levels; Clock Configuration; 127 automated tests. Details in [CHANGELOG.md](CHANGELOG.md).
 
 ## Features
 
